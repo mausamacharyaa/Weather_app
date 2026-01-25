@@ -46,7 +46,7 @@ class WeatherScreen extends StatelessWidget {
             const SizedBox(height: 24),
 
             // w=text below the main sandbox
-            const Text('Weather Forecast', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            const Text('Mamata Chorni yo Weather App ho', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
 
             const SizedBox(height: 9),
             const SingleChildScrollView(
@@ -89,7 +89,6 @@ class WeatherScreen extends StatelessWidget {
     );
   }
 }
-
 
 
 
