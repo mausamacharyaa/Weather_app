@@ -1,22 +1,29 @@
 import 'package:flutter/material.dart';
 
 class AdditinalInfoItem extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final String value;
   const AdditinalInfoItem({
     super.key,
+    required this.icon,
+    required this.label,
+    required this.value,
   });
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return  Column(
       children: [
-        Icon(Icons.water_drop,
+        Icon(
+          icon,
         size:35 ,
         ),
-           SizedBox(height: 8),
-          Text('Humidity',),
+         const SizedBox(height: 8),
+          Text(label),
           SizedBox(height: 6),
-          Text('91',
-          style: TextStyle(
+          Text(value,
+          style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),

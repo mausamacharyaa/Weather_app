@@ -53,12 +53,31 @@ class WeatherScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
-                    HourlyForecast(),
-                    HourlyForecast(),
-                    HourlyForecast(),
-                    HourlyForecast(),
-                    HourlyForecast(),
-                    HourlyForecast(),
+                    HourlyForecast(
+                      time:'00:00',
+                      icon: Icons.cloud,
+                      temperature: '301.22',
+                    ),
+                    HourlyForecast(
+                       time:'03:00',
+                      icon: Icons.cloud,
+                      temperature: '301.22',
+                    ),
+                    HourlyForecast(
+                      time:'04:00',
+                      icon: Icons.cloud,
+                      temperature: '301.22',
+                    ),
+                    HourlyForecast(
+                       time:'05:00',
+                      icon: Icons.cloud,
+                      temperature: '301.22',
+                    ),
+                    HourlyForecast(
+                     time:'06:00',
+                      icon: Icons.cloud,
+                      temperature: '301.22',
+                    ),
                 ],
               ),
             ),
@@ -78,9 +97,21 @@ class WeatherScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                AdditinalInfoItem(),
-                AdditinalInfoItem(),
-                AdditinalInfoItem(),
+                AdditinalInfoItem(
+                  icon: Icons.water_drop,
+                  label: 'Humidity',
+                  value: '91',
+                ),
+                AdditinalInfoItem(
+                  icon: Icons.air,
+                  label: 'Wind Speed',
+                  value: '7.5',
+                ),
+                AdditinalInfoItem(
+                  icon: Icons.beach_access,
+                  label: 'Pressure',
+                  value: '1000',
+                ),
               ],
             ),
           ],
