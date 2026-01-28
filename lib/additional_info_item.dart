@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class AdditinalInfoItem extends StatelessWidget {
+class AdditionalInfoItem extends StatelessWidget {
   final IconData icon;
   final String label;
   final String value;
-  const AdditinalInfoItem({
+  const AdditionalInfoItem({
     super.key,
     required this.icon,
     required this.label,
@@ -13,21 +13,22 @@ class AdditinalInfoItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Column(
+    return Column(
       children: [
         Icon(
           icon,
-        size:35 ,
+          size: 32,
         ),
-         const SizedBox(height: 8),
-          Text(label),
-          SizedBox(height: 6),
-          Text(value,
+        const SizedBox(height: 8),
+        Text(label),
+        const SizedBox(height: 8),
+        Text(
+          value,
           style: const TextStyle(
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),
-          ),
+        )
       ],
     );
   }
