@@ -3,9 +3,31 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/additional_info_item.dart' show AdditinalInfoItem;
 import 'package:flutter_application_1/hourly_forecast_item.dart' show HourlyForecast;
+import 'package:http/http.dart' as http;
 
-class WeatherScreen extends StatelessWidget {
+class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
+
+  @override
+  State<WeatherScreen> createState() => _WeatherScreenState();
+}
+
+class _WeatherScreenState extends State<WeatherScreen> {
+  
+  @override
+  void initState() {
+    super.initState();
+    getCurrentWeather();
+  }
+
+  Future getCurrentWeather() async{
+    final res = await http.get(
+      Uri.parse(
+        'https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&hourly=temperature_2m'),
+    );
+
+    print(res.body);
+  }
 
   @override
   Widget build(BuildContext context) {
