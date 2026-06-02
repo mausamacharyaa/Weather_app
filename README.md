@@ -1,2 +1,1 @@
-#been so much days just learned about this README stuff.
-Gonna write this down from now on XD
+A simple app that shows weather information for different cities. It displays temperature, humidity, wind speed, and current weather conditions.
